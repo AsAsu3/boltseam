@@ -1,0 +1,30 @@
+# Boltseam — never ignore .kiro (Kiroween rules require it at the repo root).
+# This file lists only build output, dependencies and local secrets.
+# It must never contain a .kiro entry; the kiro-dir-guard hook fails loudly if it does.
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+.next/
+*.tsbuildinfo
+
+# Test and coverage output
+coverage/
+.nyc_output/
+
+# Environment and local secrets (never commit keys)
+.env
+.env.*
+!.env.example
+
+# OS and editor artefacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.log
