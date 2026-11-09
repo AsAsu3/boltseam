@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "boltseam/decomposition/v1",
+  "title": "DecompositionOutput",
+  "description": "Structured output shape for the decomposition model call. Each element is one atomic sub-claim.",
+  "type": "object",
+  "required": ["subClaims"],
+  "additionalProperties": false,
+  "properties": {
+    "subClaims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/SubClaim" }
+    }
+  },
+  "definitions": {
+    "DomainTag": {
+      "type": "string",
+      "enum": [
+        "price",
+        "fx",
+        "date",
+        "repo",
+        "weather",
+        "statistic",
+        "arithmetic",
+        "unrouted"
+      ]
+    },
+    "Span": {
+      "type": "array",
+      "description": "[startInclusive, endExclusive] character offsets into the original post text",
+      "items": { "type": "integer", "minimum": 0 },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "ArithmeticOperands": {
+      "type": "object",
+      "required": ["kind", "values", "statedResult"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["percentage_change", "multiple", "sum", "difference"]
+        },
+        "values": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2
+        },
+        "statedResult": { "type": "number" }
+      }
+    },
+    "SubClaim": {
+      "type": "object",
+      "required": ["id", "span", "text", "domain"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^sc-[0-9]+$"
+        },
+        "span": { "$ref": "#/definitions/Span" },
+        "text": { "type": "string", "minLength": 1 },
+        "domain": { "$ref": "#/definitions/DomainTag" },
+        "statedValue": {
+          "oneOf": [{ "type": "number" }, { "type": "null" }]
+        },
+        "unit": {
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+        },
+        "entities": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "number" },
+              { "type": "null" }
+            ]
+          }
+        },
+        "dateExpr": {
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+        },
+        "arithmeticOperands": {
+          "oneOf": [
+            { "$ref": "#/definitions/ArithmeticOperands" },
+            { "type": "null" }
+          ]
+        },
+        "unroutedReason": {
+          "oneOf": [{ "type": "string", "minLength": 1 }, { "type": "null" }]
+        },
+        "userEdited": { "type": "boolean" },
+        "originalExtraction": { "type": "null" }
+      }
+    }
+  }
+}

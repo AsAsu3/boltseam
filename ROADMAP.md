@@ -15,7 +15,7 @@ Hard deadline: **2026-12-05 07:00 JST** (2026-12-04 14:00 PT). Submission target
 - [ ] Build in Kiro, in task-list order: intake spec tasks 1–4 (form, normaliser, decomposition client, validator).
 - [ ] Router spec tasks 1–4 (packet schema, comparator, router, cache/failure policy).
 - [ ] Start `BUILDLOG.md`: record hook firings, MCP usage, and any spec change notes — the write-up is built from this log.
-- [ ] Milestone M1 (2026-11-10): a pasted claim produces a frozen, user-corrected worklist; packets exist for fixture data end-to-end (organs may still be fixture-backed).
+- [x] Milestone M1 (2026-11-10): a pasted claim produces a frozen, user-corrected worklist; packets exist for fixture data end-to-end (organs may still be fixture-backed). — Completed 2026-11-09 in three Kiro CLI sessions; see BUILDLOG.md.
 
 ## Phase 2 — Organs (2026-11-11 – 11-17)
 

@@ -2,19 +2,19 @@
 
 Spec: `organ-router-first-organs` · Execute in Kiro after the intake spec's Worklist contract is in place.
 
-- [ ] 1. Define the Evidence Packet schema and organ interface
+- [x] 1. Define the Evidence Packet schema and organ interface
   - Types + JSON Schema for the packet, verdict enum, reason codes, tolerance shapes; a packet validator shared by organs, stitcher, and tests.
   - _Requirements: 2.1, 2.2_
 
-- [ ] 2. Implement the comparator library
+- [x] 2. Implement the comparator library
   - Deterministic claimed/observed comparison with relative and absolute tolerances; partially-supported band support for range-based organs.
   - _Requirements: 2.3, 2.4_
 
-- [ ] 3. Implement the Router
+- [x] 3. Implement the Router
   - Registry dispatch by domain tag; `unverifiable/no_organ` for unimplemented tags; 10 s per-organ timeout; per-sub-claim status events; rejection-to-`source_error` conversion.
   - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5_
 
-- [ ] 4. Implement the session cache and failure policy
+- [x] 4. Implement the session cache and failure policy
   - URL-keyed cache preserving original fetch time; single retry with backoff; 429 latch per source per audit.
   - _Requirements: 7.1, 7.2, 7.3_
 
