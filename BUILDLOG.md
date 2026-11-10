@@ -83,3 +83,43 @@ return `unverifiable/no_organ` by design, and real organs land in M2.
   tasks 1–7, and the remaining task-8 scope is the dedicated review pass.
 - The hook definitions in `.kiro/hooks/` are IDE-format JSON; the CLI
   sessions above did not execute them, and no hook firings are claimed here.
+
+## M2 sessions — 2026-11-10 (Kiro CLI, same environment as M1)
+
+Three further non-interactive sessions ran on 2026-11-10. The CLI was
+found still logged in (Builder ID); no re-login was needed.
+
+- Session A (Router tasks 5–7): Market Organ (Kraken primary; a Binance
+  cross-check that fails for availability reasons, including the HTTP 451
+  geo-block observed from this machine, is treated as source unavailable
+  and never as source_disagreement), FX Organ (Frankfurter — the API has
+  moved to https://api.frankfurter.dev/v1; the migration is recorded as a
+  CHANGE NOTES entry in the Router spec's tasks.md, and the endpoint was
+  confirmed live before implementation; open.er-api.com remains the
+  fallback), Calendar Organ (Nager.Date v3). Tasks 5–7 checked [x] by the
+  session. 161/161 tests passed; tsc --noEmit clean.
+- Session B (Router tasks 8–10): Abacus (arithmetic recomputation;
+  verdicts only from the deterministic comparator), the organ-mcp stdio
+  server exposing market/fx/calendar/abacus verify tools through the same
+  Organ interface, and the Tests task (Abacus contract + property tests,
+  and a golden test running all six CONCEPT.md sub-claims through the
+  Router with recorded fixtures). Tasks 8–10 checked [x] by the session.
+  204/204 tests passed; tsc --noEmit clean. The Router spec is complete.
+- Session C (Repo Organ tasks 1–7, plus Intake task 8): the session was
+  INTERRUPTED by Kiro's monthly usage limit ("You've reached your monthly
+  usage limit") before its final verification pass. State left behind,
+  verified by direct inspection after the interruption: the Repo Organ
+  implementation, fixtures and contract tests exist and the full Vitest
+  suite passes (242/242, 16 files), but `tsc --noEmit` reports 4 errors
+  in the Repo Organ files (two unused declarations in
+  src/organs/repo/repoOrgan.ts, one type error and one unused variable in
+  tests/contract/repo/repoOrgan.test.ts), and the task checkboxes in
+  organ-repo-github/tasks.md and Intake task 8 were not yet ticked. The
+  session's own analysis found Intake task 8's named tests already exist
+  and pass, but it did not get to record that. These residuals are
+  recorded here rather than silently fixed outside Kiro; they are the
+  first items for the next Kiro session once usage is available again.
+
+M2 status against ROADMAP: the organs named in the M2 milestone (Market,
+FX, Calendar, Abacus, Repo) are implemented; the milestone is not ticked
+complete until the Session C residuals above are closed inside Kiro.

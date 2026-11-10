@@ -1,0 +1,6 @@
+{
+  "requestUrl": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1440&since=1728518400",
+  "fetchedAt": "2024-10-11T00:00:01Z",
+  "source": "Kraken public API",
+  "note": "Recorded fixture — representative daily OHLC for 2024-10-10. The timestamp 1728518400 = 2024-10-10T00:00:00Z."
+}

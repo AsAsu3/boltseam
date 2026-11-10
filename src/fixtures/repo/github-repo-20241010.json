@@ -1,0 +1,21 @@
+{
+  "id": 123456789,
+  "name": "demo-bot",
+  "full_name": "example-user/demo-bot",
+  "owner": {
+    "login": "example-user"
+  },
+  "private": false,
+  "html_url": "https://github.com/example-user/demo-bot",
+  "description": "A demo trading bot repository used for Boltseam golden fixture tests.",
+  "created_at": "2024-10-07T00:00:00Z",
+  "updated_at": "2024-10-10T12:00:00Z",
+  "pushed_at": "2024-10-10T12:00:00Z",
+  "stargazers_count": 2345,
+  "forks_count": 89,
+  "language": "Python",
+  "archived": false,
+  "disabled": false,
+  "open_issues_count": 7,
+  "default_branch": "main"
+}

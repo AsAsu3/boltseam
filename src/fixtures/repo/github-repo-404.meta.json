@@ -1,0 +1,6 @@
+{
+  "requestUrl": "https://api.github.com/repos/example-user/nonexistent-repo",
+  "fetchedAt": "2024-10-10T12:00:01Z",
+  "source": "GitHub REST API",
+  "note": "Recorded fixture — 404 Not Found response. Per design, 404 means 'not publicly retrievable'; a private repo also returns 404, so we never say the repo does not exist (Req 2.3)."
+}

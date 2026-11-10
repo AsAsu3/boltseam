@@ -1,0 +1,6 @@
+{
+  "requestUrl": "https://api.github.com/repos/example-user/docs-only",
+  "fetchedAt": "2024-10-10T12:00:01Z",
+  "source": "GitHub REST API",
+  "note": "Recorded fixture — repository with null language field. Used to test Req 3.3: null language → unverifiable/no_language_data."
+}

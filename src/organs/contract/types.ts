@@ -29,6 +29,12 @@ export type ReasonCode =
   | "future_date"
   | "pre_listing_date"
   | "no_country"
+  // Repo organ reason codes (Req 1.2, 1.3, 2.2, 3.3, 4.1, 5.3)
+  | "repo_not_found"
+  | "no_star_history"
+  | "missing_repo_ref"
+  | "ambiguous_repo_ref"
+  | "no_language_data"
   | null;
 
 // ── Note codes ────────────────────────────────────────────────────────────

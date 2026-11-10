@@ -1,0 +1,6 @@
+{
+  "requestUrl": "https://date.nager.at/api/v3/PublicHolidays/2024/US",
+  "fetchedAt": "2024-10-11T00:00:01Z",
+  "source": "Nager.Date (supplementary public holidays)",
+  "note": "Recorded fixture — US federal holidays for 2024."
+}

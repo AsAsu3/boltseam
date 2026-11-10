@@ -1,0 +1,6 @@
+{
+  "requestUrl": "https://api.github.com/repos/example-user/demo-bot",
+  "fetchedAt": "2024-10-10T12:00:01Z",
+  "source": "GitHub REST API",
+  "note": "Recorded fixture — representative repository resource for 'example-user/demo-bot'. Created 2024-10-07, so a '2000 stars in 3 days' claim spans 2024-10-07 through 2024-10-09 — that growth history is not in this response (Req 4.1)."
+}

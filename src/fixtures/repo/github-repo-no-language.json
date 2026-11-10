@@ -1,0 +1,21 @@
+{
+  "id": 987654321,
+  "name": "docs-only",
+  "full_name": "example-user/docs-only",
+  "owner": {
+    "login": "example-user"
+  },
+  "private": false,
+  "html_url": "https://github.com/example-user/docs-only",
+  "description": "Documentation-only repository with no detectable language.",
+  "created_at": "2024-01-15T00:00:00Z",
+  "updated_at": "2024-10-10T12:00:00Z",
+  "pushed_at": "2024-10-10T12:00:00Z",
+  "stargazers_count": 42,
+  "forks_count": 3,
+  "language": null,
+  "archived": false,
+  "disabled": false,
+  "open_issues_count": 0,
+  "default_branch": "main"
+}

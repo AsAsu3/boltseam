@@ -1,0 +1,6 @@
+{
+  "requestUrl": "https://api.frankfurter.dev/v1/2024-10-10?from=USD&to=JPY",
+  "fetchedAt": "2024-10-11T00:00:01Z",
+  "source": "Frankfurter (central-bank reference rate)",
+  "note": "Recorded fixture — USD/JPY rate on 2024-10-10. Rate 148.97 confirmed live against api.frankfurter.dev on 2026-11-10."
+}

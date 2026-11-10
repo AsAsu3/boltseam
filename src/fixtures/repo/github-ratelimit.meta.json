@@ -1,0 +1,6 @@
+{
+  "requestUrl": "https://api.github.com/repos/example-user/demo-bot",
+  "fetchedAt": "2024-10-10T12:00:01Z",
+  "source": "GitHub REST API",
+  "note": "Recorded fixture — 403 rate-limit response. Used to test Req 5.3: 403 with X-RateLimit-Remaining: 0 → source_error/rate_limited."
+}

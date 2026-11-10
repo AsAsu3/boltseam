@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "organ-mcp": {
+      "command": "npx",
+      "args": ["tsx", "src/organ-mcp/server.ts"],
+      "disabled": false
+    }
+  }
+}
